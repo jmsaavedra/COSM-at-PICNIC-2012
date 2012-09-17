@@ -20,7 +20,7 @@ float multi;
 
 DataOut feed;
 
-String apiKey = "_sG8TKAucC_cY02I8FIjYzkZkv-SAKxWWGZDWVh2eDlJbz0g";
+String apiKey = "YOUR_COSM_API_KEY";
 String feedId = "76032";
 //http://cosm.com/feeds/76032
 
@@ -57,6 +57,9 @@ void draw() {
 
     feed.setStream("light", l); //send request (datastream id, new value)
     println(l); //look at number printed, then check your feed on cosm!
+    fill(abs(300-l));
+    text("current light value: ", 20, 20);
+    text(l, 20, 40);
   }
 }
 
